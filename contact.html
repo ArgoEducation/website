@@ -23,14 +23,9 @@
           name: $('#name').val(),
           email: $('#email').val(),
           message: $('#message').val()
-        },
-        success: function(){
-          alert('感谢您的反馈，我们将尽快通过Email与您联系！');
-        },
-        error: function() {
-          alert('抱歉，你的反馈发送失败，请尝试与我们邮件联系，谢谢！')
         }
       });
+      alert('感谢您的反馈，我们将尽快通过Email与您联系！');
     }
   </script>
   <link rel="icon" type="image/x-icon" href="images/youjia32.png">
@@ -62,7 +57,7 @@
         <label>姓名：</label><input id="name" />
         <label>Email：</label><input id="email" />
         <label>留言：</label><textarea id="message" placeholder="有什么问题或者想说的话？"></textarea>
-        <div><a class="button" href="#" id="submit_contact" onclick="send()">提交</a></div>
+        <div><a class="button" href="#message_form" id="submit_contact" onclick="send()">提交</a></div>
       </div>
     </div>
   </div>
