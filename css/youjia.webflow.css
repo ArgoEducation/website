@@ -90,8 +90,7 @@ p {
 .button:hover {
   border: 0px none #b6b6b6;
   background-color: #bbdb14;
-  color: white;
-  font-weight: 700;
+  color: #685541;
 }
 .button.more {
   margin-top: 60px;
