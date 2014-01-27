@@ -12,20 +12,31 @@
   <link rel="stylesheet" type="text/css" href="css/inner.css">
   <script type="text/javascript">
     if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
-    
-    function send() {
-      $.ajax({
-        type: 'GET',
-        url: 'http://argo.hostingsiteforfree.com/test.php',
-        dataType: 'json',
-        crossDomain: true,
-        data: {
-          name: $('#name').val(),
-          email: $('#email').val(),
-          message: $('#message').val()
-        }
-      });
-      alert('感谢您的反馈，我们将尽快通过Email与您联系！');
+        
+    function check() {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if ($('#name').val() == '') {
+        alert('请输入您的姓名。');
+      } else if ($('#email').val() == '') {
+        alert('请输入您的Email。');
+      } else if (!re.test($('#email').val())) {
+        alert('Email的格式错误，请检查。');
+      } else if (jcap() == false) {
+        alert('验证码错误，请重新输入。');
+      } else {
+        $.ajax({
+          type: 'GET',
+          url: 'http://argo.hostingsiteforfree.com/test.php',
+          dataType: 'json',
+          crossDomain: true,
+          data: {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            message: $('#message').val()
+          }
+        });
+        alert('感谢您的反馈，我们将尽快通过Email与您联系！');  
+      }
     }
   </script>
   <link rel="icon" type="image/x-icon" href="images/youjia32.png">
@@ -51,13 +62,16 @@
       <h3>联系我们</h3>
       <hr>
       <h5>地址：上海市静安区南京西路580号南证大厦12楼</h5>
-      <h5>Email：xxx@argoeducation.com</h5>
+      <h5>Email：contact@argoeducation.com</h5>
       
       <div id="message_form">
-        <label>姓名：</label><input id="name" />
-        <label>Email：</label><input id="email" />
+        <label>姓名（必填）：</label><input id="name" />
+        <label>Email（必填）：</label><input id="email" />
+        <label>其他联系方式（QQ、手机等）：</label><input id="contact" />
         <label>留言：</label><textarea id="message" placeholder="有什么问题或者想说的话？"></textarea>
-        <div><a class="button" href="#message_form" id="submit_contact" onclick="send()">提交</a></div>
+        <label>验证码（必填）：</label>
+        <script type="text/javascript">sjcap();</script>
+        <div><a class="button" href="#message_form" id="submit_contact" onclick="check()">提交</a></div>
       </div>
     </div>
   </div>
@@ -69,5 +83,8 @@
   </footer>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
+  <!-- all content by Jonathan Feaster (http://www.bitdesigner.com/) -->
+  <script type="text/javascript" src="js/md5.js"></script>
+  <script type="text/javascript" src="js/jcap.js"></script>  
 </body>
 </html>

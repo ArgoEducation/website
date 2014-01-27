@@ -204,6 +204,11 @@ p a {
   resize: none;
 }
 
+#message_form p {
+  margin: 20px 0;
+  text-indent: 0;
+}
+
 p a:hover {
   color: #bbdb14;
 }
