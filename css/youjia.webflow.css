@@ -189,6 +189,10 @@ p {
 .services {
   padding-right: 20px;
   padding-left: 20px;
+  text-align: center;
+}
+.services>img, .services>p, .services>h3 {
+  text-align: center;
 }
 .icon {
   padding-top: 0px;
