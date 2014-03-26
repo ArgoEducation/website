@@ -218,6 +218,28 @@ p a:visited {
   color: #685541;
 }
 
+.team_img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    border-radius: 75px;
+    overflow: hidden;
+}
+
+.team_img:hover {
+    border-radius: 0;
+}
+
+#team_table td {
+    vertical-align: top;
+}
+
+#team_table td > h4 {
+    margin-top: 0;
+}
+
 @media (max-width: 767px) {
   .main-content {
     margin: 50px;
