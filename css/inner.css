@@ -241,7 +241,7 @@ p a:visited {
 
 @media (max-width: 767px) {
   .main-content {
-    margin: 50px;
+    margin: 20px;
   }
   .main-container {
     margin: 50px 0px 100px 0px;
@@ -256,11 +256,17 @@ p a:visited {
 }
 
 @media (max-width: 479px) {
+  .main-content {
+    margin: 10px;
+  }
   .nav-block {
     width: 100%;
   }
   p {
     text-indent: 0;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 15px;
   }
   .main-container {
     padding: 30px;
