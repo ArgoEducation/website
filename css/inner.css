@@ -292,4 +292,7 @@ p a:visited {
     border-radius: 75px;
     overflow: hidden;
   }
+  .quote {
+    padding: 10px;
+  }
 }
