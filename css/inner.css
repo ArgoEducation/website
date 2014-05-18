@@ -227,6 +227,10 @@ p a:visited {
     overflow: hidden;
 }
 
+.team_img_mobile {
+    display: none;
+}
+
 .team_img:hover {
     border-radius: 0;
 }
@@ -270,5 +274,22 @@ p a:visited {
   }
   .main-container {
     padding: 20px;
+  }
+  .table-image, .team_img {
+    display: none;
+  }
+  .table-image-mobile {
+    width: 128px;
+    height: 128px;
+    transition: 0.5s;
+    margin: 0 auto;
+  }
+  .team_img_mobile {
+    display: block;
+    width: 150px;
+    height: 150px;
+    transition: 0.5s;
+    border-radius: 75px;
+    overflow: hidden;
   }
 }
