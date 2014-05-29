@@ -456,10 +456,10 @@ p {
     display: inline-block;
     background-color: #000;
     color: #fff;
-    filter:alpha(opacity=80);
-    -moz-opacity:0.8;
-    -khtml-opacity:0.8;
-    opacity: 0.8;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity:0.5;
+    opacity: 0.5;
     text-shadow: none;
 }
   
