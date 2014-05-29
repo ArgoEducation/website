@@ -446,6 +446,23 @@ p {
   z-index: 20;
   position: relative;
 }
+
+.telephone {
+    position: absolute;
+    right: 0;
+    padding: 10px 20px;
+    top: 80px;
+    float: right;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -khtml-opacity:0.8;
+    opacity: 0.8;
+    text-shadow: none;
+}
+  
 @media (max-width: 991px) {
   h1 {
     font-size: 80px;
@@ -806,4 +823,9 @@ p {
   }
   p {
     font-size: 15px;
+  }
+  
+  .telephone {
+    top: 300px;
+  }
 }
